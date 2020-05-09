@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/cf8d89bc-5e40-4790-b517-70e0aa8146e3.png-d2fede4bb0f45a7c99acb3dbdbbbba18.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Sprites/sBloodyBoom/layers/fa81992d-7678-47a9-b555-a618de513f49/cf8d89bc-5e40-4790-b517-70e0aa8146e3.png"
+dest_files=[ "res://.import/cf8d89bc-5e40-4790-b517-70e0aa8146e3.png-d2fede4bb0f45a7c99acb3dbdbbbba18.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

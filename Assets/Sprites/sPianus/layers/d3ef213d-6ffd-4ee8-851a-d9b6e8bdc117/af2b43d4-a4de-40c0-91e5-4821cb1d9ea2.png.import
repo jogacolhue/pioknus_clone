@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/af2b43d4-a4de-40c0-91e5-4821cb1d9ea2.png-890288f8e7a2c91986c1c3ea00a9766d.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Sprites/sPianus/layers/d3ef213d-6ffd-4ee8-851a-d9b6e8bdc117/af2b43d4-a4de-40c0-91e5-4821cb1d9ea2.png"
+dest_files=[ "res://.import/af2b43d4-a4de-40c0-91e5-4821cb1d9ea2.png-890288f8e7a2c91986c1c3ea00a9766d.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

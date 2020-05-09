@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/30782e05-d8a5-48fa-b2be-930bcc109138.png-2dd70a83e88fb42959524cf056e7a048.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Sprites/sFontDamageHurt/30782e05-d8a5-48fa-b2be-930bcc109138.png"
+dest_files=[ "res://.import/30782e05-d8a5-48fa-b2be-930bcc109138.png-2dd70a83e88fb42959524cf056e7a048.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

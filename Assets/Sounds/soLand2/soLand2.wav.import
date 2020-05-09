@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/soLand2.wav-b5a943a5bac06dc4010760f07ecb870a.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/soLand2/soLand2.wav"
+dest_files=[ "res://.import/soLand2.wav-b5a943a5bac06dc4010760f07ecb870a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,1282 @@
+[gd_scene load_steps=41 format=2]
+
+[ext_resource path="res://Assets/Sprites/sPianus/c2f8875e-a8a8-43b1-be60-a4af34257adf.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Sprites/sPianus/d3ef213d-6ffd-4ee8-851a-d9b6e8bdc117.png" type="Texture" id=2]
+[ext_resource path="res://Src/Actors/Pianus.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Sprites/sPianusBeamRing/dc385885-58d4-4bb6-848f-d9b0ecf55f18.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sprites/sLazerBeamStartup/66de8f32-db25-4e6d-9ffe-bc3781376af3.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Sprites/sPianusShootBeam/bc7440d2-3d3d-43d0-8704-68d35bc97218.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Sprites/sLazerBeam/2bcf5c57-2670-4a30-a6a0-5f4fc3686716.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Sprites/sLazerBeam/cff029b7-41fd-48d7-b7d8-234d954774ab.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Sprites/sPianusBeamRing/1e853491-9833-4f44-b512-e4c443909d6d.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Sprites/sPianusBeamRing/8218b620-a4ec-49b3-a225-d4327b4f589c.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Sprites/sPianusChargeBeam/15f2a6a6-53a0-4002-a24b-a2c25923195c.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Sprites/sPianusBeamRing/0b1bbdd2-8c22-473f-b6fb-c088f89de7c1.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Sprites/sLazerBeam/eb886bd2-09e0-4a08-9b5a-4d68ddca7ddf.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Sprites/sLazerBeamWave/e8b3af6c-852e-4d8b-a73a-d435bead04fb.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Sprites/sLazerBeamStartup/38f59f66-e896-4cd9-817e-e85021022ead.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Sprites/sLazerBeamWave/da90ec02-0a3b-47f7-9d3b-fe7687af20dd.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Sprites/sLazerBeamWave/b72c8d35-0b7e-470e-9c6c-4e92493870dc.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Sprites/sLazerBeamWave/6c574e61-9bf4-4dc6-b86a-36bea8d88e46.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Sprites/sLazerBeamStartup/1aa4ec2f-38d7-4657-adde-9c4bd865d338.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Sprites/sPianusDeath/82c90dec-7b41-4328-80f0-aaf673de0cee.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Sprites/sPianusDeath/26f5ae10-c20d-4c20-bea9-e7931b92d76b.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Sprites/sPianusDeathExplosion/93bb5b55-c411-427a-a0f6-b8844c4ac753.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Sounds/soBeamEnd/soBeamEnd.wav" type="AudioStream" id=23]
+[ext_resource path="res://Assets/Sounds/soBeamStart/soBeamStart.wav" type="AudioStream" id=24]
+[ext_resource path="res://Assets/Sounds/soBeamShooting/soBeamShooting.wav" type="AudioStream" id=25]
+[ext_resource path="res://Assets/Sounds/soBeamCharge/soBeamCharge.wav" type="AudioStream" id=26]
+[ext_resource path="res://Assets/Sounds/soBossDeathDrop/soBossDeathDrop.wav" type="AudioStream" id=27]
+[ext_resource path="res://Assets/Sounds/soBloodyBoomDeath/soBloodyBoomDeath.wav" type="AudioStream" id=28]
+[ext_resource path="res://Assets/Sounds/soBossDeathBuildup/soBossDeathBuildup.wav" type="AudioStream" id=29]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 9.73376, 129.784 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 15.6597, 27.7287 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "death"
+length = 7.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 4.5, 4.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 3.605 ),
+"update": 1,
+"values": [ ExtResource( 1 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 20 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4, 4.1, 4.2, 4.3, 4.4, 4.5, 4.9, 6.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 18.3792, 18.3792 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 53.0007, 68.901 ), Vector2( 0, 0 ), Vector2( 0, 30 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("LaserCharge/LaserCharge:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("LaserCharge/CargeEffects:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Laser/LaserCollision:monitoring")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Laser/LaserCollision:monitorable")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Laser:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("CollisionShape2D:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -47.6399, 2.15776 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("CollisionShape2D:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 2.27209, 72.7065 ) ]
+}
+tracks/10/type = "audio"
+tracks/10/path = NodePath("AudioStreamPlayer2D")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 28 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 29 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 24 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 27 )
+} ],
+"times": PoolRealArray( 0, 1.9, 4.5, 6.1 )
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Sprite:scale")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 4.5, 4.8, 4.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 20, 20 ), Vector2( 1, 1 ) ]
+}
+tracks/12/type = "method"
+tracks/12/path = NodePath(".")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 2, 6.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "signal_death"
+}, {
+"args": [  ],
+"method": "signal_death_stomp"
+} ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.9
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ), ExtResource( 2 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("LaserCharge/LaserCharge:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("LaserCharge/CargeEffects:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Laser/LaserCollision:monitoring")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Laser/LaserCollision:monitorable")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Laser:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("CollisionShape2D:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -47.6399, 2.15776 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("CollisionShape2D:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 2.27209, 72.7065 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 11 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("LaserCharge/LaserCharge:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 19 ), ExtResource( 15 ), ExtResource( 5 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("LaserCharge/LaserCharge:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("LaserCharge/LaserCharge:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -336.387, 137.042 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("LaserCharge/LaserCharge:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("LaserCharge/CargeEffects:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4, 4.1, 4.2, 4.3 ),
+"transitions": PoolRealArray( 1.41421, 1, 1, 1, 1.41421, 1, 1, 1, 1.41421, 1, 1, 1, 1.41421, 1, 1, 1, 1.41421, 1, 1, 1, 1.41421, 1, 1, 1, 1.41421, 1, 1, 1, 1.41421, 1, 1, 1, 1.41421, 1, 1, 1, 1.41421, 1, 1, 1, 1.41421, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 18 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 14 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("LaserCharge/CargeEffects:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Laser/Laser:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Laser/LaserCollision:monitoring")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Laser/LaserCollision:monitorable")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Laser/LaserCollision/CollisionShape2D:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("LaserCharge/CargeEffects:scale")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.504009, 0.355753 ), Vector2( 0.805942, 0.568871 ), Vector2( 0.956908, 0.67543 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("LaserCharge/CargeEffects:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -333.995, 122.692 ), Vector2( -337.501, 120.3 ), Vector2( -331.291, 131.063 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Laser/Laser2:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Laser/Laser3:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("CollisionShape2D:scale")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -45.0399, 2.04 ) ]
+}
+tracks/16/type = "audio"
+tracks/16/path = NodePath("AudioStreamPlayer2D")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 26 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=6]
+length = 6.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 6 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("LaserCharge/LaserCharge:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("LaserCharge/CargeEffects:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Laser/Laser:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Laser/Laser:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ Vector2( -313.69, 189.049 ), Vector2( -829.749, 189.049 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Laser/Laser:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 5 ), ExtResource( 7 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Laser/LaserCollision:monitoring")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.3, 4.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Laser/LaserCollision:monitorable")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.3, 4.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Laser/LaserCollision/CollisionShape2D:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Laser/Laser2:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Laser/Laser2:texture")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 8 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Laser/Laser2:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -834.569, 188.582 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Laser/Laser3:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Laser/Laser3:texture")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 13 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Laser/Laser3:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -840.668, 188.582 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Laser/Laser3:scale")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.001, 2.5, 3, 3.5, 4, 4.5, 4.8, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 0.95 ), Vector2( 1, 1 ), Vector2( 1, 0.95 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1, 0.95 ), Vector2( 1, 1 ), Vector2( 1, 0.95 ), Vector2( 1, 1 ), Vector2( 1, 0.95 ), Vector2( 1, 1 ), Vector2( 1, 0 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Laser/Laser2:scale")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 4.8, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 0.95 ), Vector2( 1, 1 ), Vector2( 1, 0.95 ), Vector2( 1, 1 ), Vector2( 1, 0.95 ), Vector2( 1, 1 ), Vector2( 1, 0.95 ), Vector2( 1, 1 ), Vector2( 1, 0.95 ), Vector2( 1, 1 ), Vector2( 1, 0 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Laser/Laser:scale")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 1.501, 2, 2.5, 3, 3.5, 4, 4.5, 4.8, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 0.95 ), Vector2( 1, 1 ), Vector2( 1, 0.95 ), Vector2( 1, 0.95 ), Vector2( 1, 1 ), Vector2( 1, 0.95 ), Vector2( 1, 1 ), Vector2( 1, 0.95 ), Vector2( 1, 1 ), Vector2( 1, 0.95 ), Vector2( 1, 1 ), Vector2( 1, 0 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("Laser:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("CollisionShape2D:scale")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -45.0399, 2.04 ) ]
+}
+tracks/20/type = "audio"
+tracks/20/path = NodePath("AudioStreamPlayer2D")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 24 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 25 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 23 )
+} ],
+"times": PoolRealArray( 0, 0.5, 4.8 )
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 0.9
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ), ExtResource( 2 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("LaserCharge/LaserCharge:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("LaserCharge/CargeEffects:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Laser/LaserCollision:monitoring")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Laser/LaserCollision:monitorable")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Laser/Laser:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Laser/LaserCollision/CollisionShape2D:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=9]
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 11 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("LaserCharge/LaserCharge:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 12 ), ExtResource( 10 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("LaserCharge/LaserCharge:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("LaserCharge/LaserCharge:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -333.995, 122.692 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("LaserCharge/LaserCharge:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.504009, 0.355753 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("LaserCharge/CargeEffects:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 9 ), ExtResource( 4 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("LaserCharge/CargeEffects:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("LaserCharge/CargeEffects:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -333.995, 122.692 ), Vector2( -335.131, 122.213 ), Vector2( -333.995, 122.692 ), Vector2( -335.131, 122.213 ), Vector2( -333.995, 122.692 ), Vector2( -335.131, 122.213 ), Vector2( -335.131, 122.213 ), Vector2( -335.131, 122.213 ), Vector2( -335.131, 122.213 ), Vector2( -335.131, 122.213 ), Vector2( -335.131, 122.213 ), Vector2( -335.131, 122.213 ), Vector2( -335.131, 122.213 ), Vector2( -335.131, 122.213 ), Vector2( -335.131, 122.213 ), Vector2( -335.131, 122.213 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("LaserCharge/CargeEffects:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.504009, 0.355753 ), Vector2( 0.303424, 0.214171 ), Vector2( 0.504009, 0.355753 ), Vector2( 0.303424, 0.214171 ), Vector2( 0.504009, 0.355753 ), Vector2( 0.303424, 0.214171 ), Vector2( 0.488553, 0.344844 ), Vector2( 0.648551, 0.457778 ), Vector2( 0.56527, 0.398994 ), Vector2( 0.648551, 0.457778 ), Vector2( 0.56527, 0.398994 ), Vector2( 0.648551, 0.457778 ), Vector2( 0.56527, 0.398994 ), Vector2( 0.648551, 0.457778 ), Vector2( 0.56527, 0.398994 ), Vector2( 0.648551, 0.457778 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Laser/Laser:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Laser/LaserCollision:monitoring")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Laser/LaserCollision:monitorable")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=10]
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 6 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("LaserCharge/LaserCharge:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("LaserCharge/CargeEffects:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Laser/Laser:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Laser/Laser:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ Vector2( -313.69, 189.049 ), Vector2( -829.749, 189.049 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Laser/Laser:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.3, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 5 ), ExtResource( 7 ), ExtResource( 8 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Laser/LaserCollision:monitoring")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Laser/LaserCollision:monitorable")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Laser/LaserCollision/CollisionShape2D:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 18.7527, 10 )
+
+[node name="Pianus" type="KinematicBody2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, 30 )
+z_index = -1
+texture = ExtResource( 20 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 2.27209, 72.7065 )
+scale = Vector2( -47.6399, 2.15776 )
+shape = SubResource( 1 )
+
+[node name="WeaponHit" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WeaponHit"]
+position = Vector2( 6.81628, 84.0669 )
+scale = Vector2( 29.44, 9.28 )
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/death = SubResource( 3 )
+anims/idle = SubResource( 4 )
+anims/laser_charge = SubResource( 5 )
+anims/laser_shot = SubResource( 6 )
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+anims/hit = SubResource( 7 )
+anims/idle = SubResource( 8 )
+anims/laser_charge = SubResource( 9 )
+anims/laser_shot = SubResource( 10 )
+
+[node name="LaserCharge" type="Node2D" parent="."]
+
+[node name="LaserCharge" type="Sprite" parent="LaserCharge"]
+visible = false
+position = Vector2( -336.387, 137.042 )
+texture = ExtResource( 19 )
+
+[node name="CargeEffects" type="Sprite" parent="LaserCharge"]
+visible = false
+position = Vector2( -334.696, 122.214 )
+scale = Vector2( 0.564396, 0.398377 )
+texture = ExtResource( 16 )
+
+[node name="Laser" type="Node2D" parent="."]
+visible = false
+
+[node name="Laser3" type="Sprite" parent="Laser"]
+position = Vector2( -840.668, 188.582 )
+texture = ExtResource( 13 )
+
+[node name="Laser2" type="Sprite" parent="Laser"]
+position = Vector2( -834.569, 188.582 )
+texture = ExtResource( 8 )
+
+[node name="Laser" type="Sprite" parent="Laser"]
+position = Vector2( -829.749, 189.049 )
+texture = ExtResource( 7 )
+
+[node name="LaserCollision" type="Area2D" parent="Laser"]
+visible = false
+monitoring = false
+monitorable = false
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Laser/LaserCollision"]
+position = Vector2( -834.937, 189.663 )
+scale = Vector2( 29.44, 4.48 )
+shape = SubResource( 11 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 27 )
+[connection signal="area_entered" from="WeaponHit" to="." method="_on_WeaponHit_area_entered"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

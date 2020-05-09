@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/65edaa73-3358-4879-a2c6-990d85a1f438.png-c64a13a77fdaf58316e2c97d1234268b.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Sprites/sPianusChargeBeam/layers/15f2a6a6-53a0-4002-a24b-a2c25923195c/65edaa73-3358-4879-a2c6-990d85a1f438.png"
+dest_files=[ "res://.import/65edaa73-3358-4879-a2c6-990d85a1f438.png-c64a13a77fdaf58316e2c97d1234268b.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

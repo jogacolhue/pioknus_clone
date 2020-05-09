@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/soBeamEnd.wav-dc4dd7390ec43e6ab3ef5fa7df4c85ed.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/soBeamEnd/soBeamEnd.wav"
+dest_files=[ "res://.import/soBeamEnd.wav-dc4dd7390ec43e6ab3ef5fa7df4c85ed.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

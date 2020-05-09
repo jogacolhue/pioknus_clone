@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/d586d11a-231e-4cf5-a302-8436cfe3a38a.png-9f253444db912c67c981f76d8f90d62a.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Sprites/sSkillIconDragonFury/layers/2487fd82-60be-4076-bc28-06436d66633e/d586d11a-231e-4cf5-a302-8436cfe3a38a.png"
+dest_files=[ "res://.import/d586d11a-231e-4cf5-a302-8436cfe3a38a.png-9f253444db912c67c981f76d8f90d62a.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

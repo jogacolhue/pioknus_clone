@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/soCrystalHit1.wav-2dd8d8a3a8df2c791d957f897336f8db.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/soCrystalHit1/soCrystalHit1.wav"
+dest_files=[ "res://.import/soCrystalHit1.wav-2dd8d8a3a8df2c791d957f897336f8db.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

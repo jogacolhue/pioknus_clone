@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/c24ac8b5-3809-493b-8471-23dcc2d283ef.png-b163878305c1e229f8fa7c8aa2696877.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Sprites/sSummonCrystalEffect/layers/de283d0d-cea9-4fd7-be67-140dbad4db9e/c24ac8b5-3809-493b-8471-23dcc2d283ef.png"
+dest_files=[ "res://.import/c24ac8b5-3809-493b-8471-23dcc2d283ef.png-b163878305c1e229f8fa7c8aa2696877.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/soMenuMove.wav-b7b06cc56bde10f97f3e228af1ab861f.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/soMenuMove/soMenuMove.wav"
+dest_files=[ "res://.import/soMenuMove.wav-b7b06cc56bde10f97f3e228af1ab861f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/ed6aa8fd-ee61-4867-a011-1592c9bd5cf9.png-a95256b729c84e93f92e4e18ddcdd224.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Sprites/sDustLand/ed6aa8fd-ee61-4867-a011-1592c9bd5cf9.png"
+dest_files=[ "res://.import/ed6aa8fd-ee61-4867-a011-1592c9bd5cf9.png-a95256b729c84e93f92e4e18ddcdd224.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

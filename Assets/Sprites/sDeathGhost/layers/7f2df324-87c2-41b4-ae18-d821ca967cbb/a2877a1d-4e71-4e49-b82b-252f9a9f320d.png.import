@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/a2877a1d-4e71-4e49-b82b-252f9a9f320d.png-0cd5f9163d69f7b4e0b09e1920e4d1dd.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Sprites/sDeathGhost/layers/7f2df324-87c2-41b4-ae18-d821ca967cbb/a2877a1d-4e71-4e49-b82b-252f9a9f320d.png"
+dest_files=[ "res://.import/a2877a1d-4e71-4e49-b82b-252f9a9f320d.png-0cd5f9163d69f7b4e0b09e1920e4d1dd.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

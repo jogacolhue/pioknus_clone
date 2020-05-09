@@ -1,0 +1,221 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Assets/Sprites/sBossInfoOverlay/8a84c354-96cd-4d86-9649-f333a2001420.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Sprites/sPlayerHPBorder/cc5732ce-b4f0-4648-887f-b62321a42f79.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sprites/sPlayerHPBorder/a3ce1c43-0dfc-4c37-91cf-a94d989c7927.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sprites/sPlayerHPBorder/162e3366-0806-4cb2-bc79-9d632aed4715.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sprites/sPlayerHPBar/cfbf57f0-7023-45bf-a907-d1ddd21a5ebc.png" type="Texture" id=5]
+[ext_resource path="res://Src/UserInterface/HealthBar.gd" type="Script" id=6]
+[ext_resource path="res://Assets/Sprites/sBossInfoMain/76fb7a4b-3a4f-4065-82e4-db60ebf7e5ec.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Sprites/sPianusHPBar/38144b0a-3d9a-4bb9-84f0-f02b17f881d8.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Sprites/sBossHPBar/59a4d339-e396-47c0-82cc-52310c1aebd7.png" type="Texture" id=9]
+[ext_resource path="res://Src/UserInterface/HealthBarPianus.gd" type="Script" id=10]
+[ext_resource path="res://Src/UserInterface/UserInterface.gd" type="Script" id=11]
+[ext_resource path="res://Assets/Sprites/sDeathMenu/360d502d-6fb4-47d6-a599-bfd889392e7d.png" type="Texture" id=12]
+[ext_resource path="res://Src/UserInterface/TimerLabel.gd" type="Script" id=13]
+[ext_resource path="res://Assets/Fonts/DS-DIGIB.TTF" type="DynamicFontData" id=14]
+[ext_resource path="res://Assets/Sprites/sSkillIconDragonCrusher/94ae6bf9-1462-492f-8511-f27b3b96eef5.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Sprites/sSkillIconDragonFury/2487fd82-60be-4076-bc28-06436d66633e.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Fonts/ARLRDBD.TTF" type="DynamicFontData" id=17]
+
+[sub_resource type="DynamicFont" id=1]
+size = 80
+font_data = ExtResource( 14 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 17 )
+
+[node name="UserInterface" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthBar" type="Control" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 46.7524
+margin_top = -96.4926
+margin_right = 86.7524
+margin_bottom = -56.4926
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="HealthBar"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthUnder" type="TextureProgress" parent="HealthBar"]
+margin_left = 57.8947
+margin_top = 8.42102
+margin_right = 555.895
+margin_bottom = 48.421
+value = 2.0
+texture_progress = ExtResource( 5 )
+tint_progress = Color( 0.0862745, 0.0627451, 0.0627451, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthOver" type="TextureProgress" parent="HealthBar"]
+margin_left = 57.8947
+margin_top = 8.42105
+margin_right = 555.895
+margin_bottom = 48.4211
+value = 2.0
+texture_progress = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="HealthBar"]
+margin_right = 563.0
+margin_bottom = 47.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="HealthBar"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 4 )
+
+[node name="UpdateTween" type="Tween" parent="HealthBar"]
+
+[node name="HealthBarPianus" type="Control" parent="."]
+margin_left = 57.8947
+margin_top = 48.4211
+margin_right = 97.8947
+margin_bottom = 88.4211
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="HealthBarPianus"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthUnder" type="TextureProgress" parent="HealthBarPianus"]
+margin_left = 144.718
+margin_top = 7.06917
+margin_right = 1068.72
+margin_bottom = 47.0691
+max_value = 500.0
+value = 500.0
+texture_progress = ExtResource( 9 )
+tint_progress = Color( 0.0862745, 0.0627451, 0.0627451, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthOver" type="TextureProgress" parent="HealthBarPianus"]
+margin_left = 143.553
+margin_top = 8.29694
+margin_right = 1067.55
+margin_bottom = 48.297
+max_value = 500.0
+value = 500.0
+texture_progress = ExtResource( 9 )
+tint_progress = Color( 1, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="HealthBarPianus"]
+margin_right = 563.0
+margin_bottom = 47.0
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="HealthBarPianus"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UpdateTween" type="Tween" parent="HealthBarPianus"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -205.5
+margin_top = -248.052
+margin_right = 205.5
+margin_bottom = -54.0519
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimerLabel" type="Label" parent="."]
+margin_left = 217.66
+margin_top = 99.3072
+margin_right = 499.66
+margin_bottom = 180.307
+custom_fonts/font = SubResource( 1 )
+text = "00:00:00"
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="TimerLabel"]
+wait_time = 0.1
+autostart = true
+
+[node name="HBoxContainer" type="Node2D" parent="."]
+position = Vector2( 706.453, 993.751 )
+
+[node name="DragonFury" type="Sprite" parent="HBoxContainer"]
+texture = ExtResource( 16 )
+
+[node name="DragonCrusher" type="Sprite" parent="HBoxContainer"]
+position = Vector2( 99.4843, 0 )
+texture = ExtResource( 15 )
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+margin_left = -35.5012
+margin_top = -43.9832
+margin_right = 4.49878
+margin_bottom = -5.98322
+custom_fonts/font = SubResource( 2 )
+text = "Z"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="HBoxContainer"]
+margin_left = 63.9564
+margin_top = -43.9832
+margin_right = 103.956
+margin_bottom = -5.98322
+custom_fonts/font = SubResource( 2 )
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="timeout" from="TimerLabel/Timer" to="TimerLabel" method="_on_ms_timeout"]

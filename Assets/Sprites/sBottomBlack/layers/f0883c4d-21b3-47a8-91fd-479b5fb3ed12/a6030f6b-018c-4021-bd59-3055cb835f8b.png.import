@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/a6030f6b-018c-4021-bd59-3055cb835f8b.png-7165065d76f465a83c2cc7bb8f5a32ee.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Sprites/sBottomBlack/layers/f0883c4d-21b3-47a8-91fd-479b5fb3ed12/a6030f6b-018c-4021-bd59-3055cb835f8b.png"
+dest_files=[ "res://.import/a6030f6b-018c-4021-bd59-3055cb835f8b.png-7165065d76f465a83c2cc7bb8f5a32ee.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

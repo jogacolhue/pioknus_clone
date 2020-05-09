@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/9e507b8a-d130-4d96-8c7d-48043315067b.png-4440639eff9ec6a4ba61985eb3b66976.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Sprites/sSummonCrystal/9e507b8a-d130-4d96-8c7d-48043315067b.png"
+dest_files=[ "res://.import/9e507b8a-d130-4d96-8c7d-48043315067b.png-4440639eff9ec6a4ba61985eb3b66976.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

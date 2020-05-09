@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/soStep0.wav-3d0c0342bcefbf8b6d1f2a505043351f.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/soStep0/soStep0.wav"
+dest_files=[ "res://.import/soStep0.wav-3d0c0342bcefbf8b6d1f2a505043351f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

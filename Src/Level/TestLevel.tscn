@@ -1,0 +1,311 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Src/Actors/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Src/Actors/Pianus.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Sprites/sBackground/6bfd2b94-ec35-4b6f-af1a-9277669d4d68.png" type="Texture" id=3]
+[ext_resource path="res://Src/Level/TestLevel.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Sprites/sLongPlatform/bb83badd-be2d-4dd3-ac68-e4cd1fad2eda.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Sprites/sSmallPlatform/4f65b9a7-e1ed-4068-a952-ce9282f3b18c.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Sprites/sGround/1ee5a263-6302-4464-b66d-a447fe92fad6.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Sprites/sGroundTop/d7f2e499-ed84-40fa-8346-99e943d7aecf.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Sprites/sDeadFish1/c7f6c0f0-e877-41f2-94dd-d5a78d9eca74.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Sprites/sTopStone/746fd190-b973-4a26-89f2-7629f46b9870.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Sprites/sSideStone/c158e4b4-54ab-464a-a505-3ac66cfd58b8.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Sprites/sUnderPianusRocks/7deea66c-6896-4592-b032-f2cb5f7630f3.png" type="Texture" id=12]
+[ext_resource path="res://Src/UserInterface/UserInterface.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Assets/Sprites/sBottomGlow/f95aa707-5de7-4373-8bc9-12756e78403c.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Sprites/sBackgroundPillar/f37f581f-831e-48e0-89fa-d21fd7c13f69.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Sprites/sBackWall/c85a75db-0a0f-4d8f-9338-7a529bee897b.png" type="Texture" id=16]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 256.693, 63.2857 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 64.8246, 58.5649 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 1473.43, 57.848 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 254.582, 775.841 )
+
+[node name="TestLevel" type="Node2D"]
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_vertical_guides_": [ 2912.08, 2868.46 ]
+}
+
+[node name="LevelSprites" type="Node" parent="."]
+
+[node name="SmallPlatform" type="Sprite" parent="LevelSprites"]
+position = Vector2( 792.646, 1008.89 )
+z_index = -2
+texture = ExtResource( 6 )
+
+[node name="SmallPlatform2" type="Sprite" parent="LevelSprites"]
+position = Vector2( 1518.74, 1021.2 )
+z_index = -2
+texture = ExtResource( 6 )
+
+[node name="LongPlatform" type="Sprite" parent="LevelSprites"]
+position = Vector2( 1154.86, 901.014 )
+z_index = -2
+texture = ExtResource( 5 )
+
+[node name="DeadFish" type="Sprite" parent="LevelSprites"]
+position = Vector2( 1257.93, 1038.96 )
+z_index = -3
+texture = ExtResource( 9 )
+
+[node name="SideStones" type="Node2D" parent="LevelSprites"]
+
+[node name="SideStone" type="Sprite" parent="LevelSprites/SideStones"]
+position = Vector2( 2720.55, 714.969 )
+texture = ExtResource( 11 )
+
+[node name="SideStones2" type="Node2D" parent="LevelSprites"]
+position = Vector2( -2741.67, 31.7568 )
+
+[node name="SideStone" type="Sprite" parent="LevelSprites/SideStones2"]
+position = Vector2( 2911.82, 739.49 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 11 )
+
+[node name="UnderPianusRock" type="Sprite" parent="LevelSprites"]
+position = Vector2( 2151.81, 1049.14 )
+z_index = -1
+texture = ExtResource( 12 )
+
+[node name="TopStone8" type="Sprite" parent="LevelSprites"]
+position = Vector2( 2629.51, 1022.42 )
+scale = Vector2( 1, -1 )
+z_index = -1
+texture = ExtResource( 10 )
+
+[node name="Ground" type="Node2D" parent="LevelSprites"]
+position = Vector2( -28.0908, 0 )
+
+[node name="Ground" type="Sprite" parent="LevelSprites/Ground"]
+position = Vector2( 563.214, 1327.29 )
+z_index = -1
+texture = ExtResource( 7 )
+
+[node name="GroundTop" type="Sprite" parent="LevelSprites/Ground"]
+position = Vector2( 560.533, 1166.19 )
+z_index = -1
+texture = ExtResource( 8 )
+
+[node name="Ground2" type="Node2D" parent="LevelSprites"]
+position = Vector2( 1087.33, -7.39232 )
+
+[node name="Ground" type="Sprite" parent="LevelSprites/Ground2"]
+position = Vector2( 563.214, 1327.29 )
+z_index = -1
+texture = ExtResource( 7 )
+
+[node name="GroundTop" type="Sprite" parent="LevelSprites/Ground2"]
+position = Vector2( 560.533, 1166.19 )
+z_index = -1
+texture = ExtResource( 8 )
+
+[node name="Ground3" type="Node2D" parent="LevelSprites"]
+position = Vector2( 2203.02, -7.39232 )
+
+[node name="Ground" type="Sprite" parent="LevelSprites/Ground3"]
+position = Vector2( 563.214, 1327.29 )
+z_index = -1
+texture = ExtResource( 7 )
+
+[node name="GroundTop" type="Sprite" parent="LevelSprites/Ground3"]
+position = Vector2( 560.533, 1166.19 )
+z_index = -1
+texture = ExtResource( 8 )
+
+[node name="DeadFish2" type="Sprite" parent="LevelSprites"]
+position = Vector2( 1573.29, 1329.09 )
+scale = Vector2( -1, 1 )
+z_index = -1
+texture = ExtResource( 9 )
+
+[node name="TopStones" type="Node2D" parent="LevelSprites"]
+
+[node name="TopStone" type="Sprite" parent="LevelSprites/TopStones"]
+position = Vector2( 216.818, 123.896 )
+texture = ExtResource( 10 )
+
+[node name="TopStone2" type="Sprite" parent="LevelSprites/TopStones"]
+position = Vector2( 573.02, 160.032 )
+texture = ExtResource( 10 )
+
+[node name="TopStone3" type="Sprite" parent="LevelSprites/TopStones"]
+position = Vector2( 996.331, 123.896 )
+texture = ExtResource( 10 )
+
+[node name="TopStone4" type="Sprite" parent="LevelSprites/TopStones"]
+position = Vector2( 1507.4, 134.221 )
+texture = ExtResource( 10 )
+
+[node name="TopStone5" type="Sprite" parent="LevelSprites/TopStones"]
+position = Vector2( 2002.99, 129.058 )
+texture = ExtResource( 10 )
+
+[node name="TopStone6" type="Sprite" parent="LevelSprites/TopStones"]
+position = Vector2( 2539.87, 123.896 )
+texture = ExtResource( 10 )
+
+[node name="TopStone7" type="Sprite" parent="LevelSprites/TopStones"]
+position = Vector2( 2983.83, 160.032 )
+texture = ExtResource( 10 )
+
+[node name="TopStones2" type="Node2D" parent="LevelSprites"]
+position = Vector2( -229.162, 1515.43 )
+scale = Vector2( 1, -1 )
+
+[node name="TopStone" type="Sprite" parent="LevelSprites/TopStones2"]
+position = Vector2( 216.818, 123.896 )
+texture = ExtResource( 10 )
+
+[node name="TopStone3" type="Sprite" parent="LevelSprites/TopStones2"]
+position = Vector2( 1202.82, 134.764 )
+texture = ExtResource( 10 )
+
+[node name="TopStone5" type="Sprite" parent="LevelSprites/TopStones2"]
+position = Vector2( 2002.99, 129.058 )
+texture = ExtResource( 10 )
+
+[node name="TopStone7" type="Sprite" parent="LevelSprites/TopStones2"]
+position = Vector2( 2777.34, 170.9 )
+texture = ExtResource( 10 )
+
+[node name="Glow" type="Node2D" parent="LevelSprites"]
+position = Vector2( 355.244, 939.288 )
+z_index = -4
+
+[node name="Sprite" type="Sprite" parent="LevelSprites/Glow"]
+position = Vector2( 57.3533, -11.9761 )
+texture = ExtResource( 14 )
+
+[node name="Sprite2" type="Sprite" parent="LevelSprites/Glow"]
+position = Vector2( 1424.45, 1.5791 )
+texture = ExtResource( 14 )
+
+[node name="Sprite3" type="Sprite" parent="LevelSprites/Glow"]
+position = Vector2( 2612.95, 0 )
+texture = ExtResource( 14 )
+
+[node name="BackStones" type="Node2D" parent="LevelSprites"]
+position = Vector2( 11.4401, 612.043 )
+z_index = -5
+
+[node name="Sprite" type="Sprite" parent="LevelSprites/BackStones"]
+texture = ExtResource( 15 )
+
+[node name="Sprite2" type="Sprite" parent="LevelSprites/BackStones"]
+position = Vector2( 840.949, 0 )
+texture = ExtResource( 15 )
+
+[node name="Sprite3" type="Sprite" parent="LevelSprites/BackStones"]
+position = Vector2( 1619.93, 0 )
+texture = ExtResource( 15 )
+
+[node name="Sprite4" type="Sprite" parent="LevelSprites/BackStones"]
+position = Vector2( 2434.32, 0 )
+texture = ExtResource( 15 )
+
+[node name="Sprite5" type="Sprite" parent="LevelSprites/BackStones"]
+position = Vector2( 3124.79, 0 )
+texture = ExtResource( 15 )
+
+[node name="Sprite6" type="Sprite" parent="LevelSprites/BackStones"]
+position = Vector2( 438.904, 346.178 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 10 )
+
+[node name="Sprite7" type="Sprite" parent="LevelSprites/BackStones"]
+position = Vector2( 2145.07, 343.087 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 10 )
+
+[node name="BackWall" type="Node2D" parent="LevelSprites"]
+position = Vector2( 132.464, 572.002 )
+z_index = -6
+
+[node name="Sprite" type="Sprite" parent="LevelSprites/BackWall"]
+position = Vector2( 265.635, 0 )
+texture = ExtResource( 16 )
+
+[node name="Sprite2" type="Sprite" parent="LevelSprites/BackWall"]
+position = Vector2( 1108.08, 0 )
+texture = ExtResource( 16 )
+
+[node name="Sprite3" type="Sprite" parent="LevelSprites/BackWall"]
+position = Vector2( 1897.39, 0 )
+texture = ExtResource( 16 )
+
+[node name="Sprite4" type="Sprite" parent="LevelSprites/BackWall"]
+position = Vector2( 2660.14, 0 )
+texture = ExtResource( 16 )
+
+[node name="Viewport" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="TextureRect" type="TextureRect" parent="Viewport"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UserInterface" parent="Viewport" instance=ExtResource( 13 )]
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( 332.717, 346.222 )
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( 816.756, 547.986 )
+shape = SubResource( 1 )
+one_way_collision = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( 454.291, 656.383 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( 1184.16, 664.734 )
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="KinematicBody2D2" type="KinematicBody2D" parent="."]
+position = Vector2( 332.717, 346.222 )
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="KinematicBody2D2"]
+position = Vector2( 1100.49, 832.853 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="KinematicBody2D2"]
+position = Vector2( -594.931, 343.789 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="KinematicBody2D2"]
+position = Vector2( 2752.44, 365.526 )
+shape = SubResource( 4 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 996.132, 686.207 )
+
+[node name="Camera2D" parent="Player/Player" index="8"]
+limit_right = 2868
+
+[node name="Pianus" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2348.18, 778.417 )
+z_index = -1
+
+[editable path="Player"]

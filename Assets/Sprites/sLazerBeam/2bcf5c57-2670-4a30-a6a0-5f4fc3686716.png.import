@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/2bcf5c57-2670-4a30-a6a0-5f4fc3686716.png-c52941f8fe30b933d33028b975f31f0f.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Sprites/sLazerBeam/2bcf5c57-2670-4a30-a6a0-5f4fc3686716.png"
+dest_files=[ "res://.import/2bcf5c57-2670-4a30-a6a0-5f4fc3686716.png-c52941f8fe30b933d33028b975f31f0f.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

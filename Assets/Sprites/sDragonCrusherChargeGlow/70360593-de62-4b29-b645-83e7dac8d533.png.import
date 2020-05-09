@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/70360593-de62-4b29-b645-83e7dac8d533.png-6abbd97da0a2219b5aab9dfb57b827af.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Sprites/sDragonCrusherChargeGlow/70360593-de62-4b29-b645-83e7dac8d533.png"
+dest_files=[ "res://.import/70360593-de62-4b29-b645-83e7dac8d533.png-6abbd97da0a2219b5aab9dfb57b827af.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

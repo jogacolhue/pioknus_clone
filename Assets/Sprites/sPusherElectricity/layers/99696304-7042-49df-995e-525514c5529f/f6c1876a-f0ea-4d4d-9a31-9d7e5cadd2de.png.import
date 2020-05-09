@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/f6c1876a-f0ea-4d4d-9a31-9d7e5cadd2de.png-339a28f316e5bde755d591f8101faa01.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Sprites/sPusherElectricity/layers/99696304-7042-49df-995e-525514c5529f/f6c1876a-f0ea-4d4d-9a31-9d7e5cadd2de.png"
+dest_files=[ "res://.import/f6c1876a-f0ea-4d4d-9a31-9d7e5cadd2de.png-339a28f316e5bde755d591f8101faa01.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

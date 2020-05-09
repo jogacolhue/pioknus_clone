@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/e6297914-2479-4918-82d5-5b217263e9ed.png-988f8d64f4e5363eb52df355f1e1b3c8.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Sprites/sBossInfoOverlay/layers/8a84c354-96cd-4d86-9649-f333a2001420/e6297914-2479-4918-82d5-5b217263e9ed.png"
+dest_files=[ "res://.import/e6297914-2479-4918-82d5-5b217263e9ed.png-988f8d64f4e5363eb52df355f1e1b3c8.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

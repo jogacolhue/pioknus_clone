@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/3f7ad6ea-341d-4c3b-8cea-b391809493d8.png-e05b591d1d29b3225719323c569856ec.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Sprites/sBuffIconBooster/layers/d43472e8-3bc1-4a88-8406-27f8a3e0cda9/3f7ad6ea-341d-4c3b-8cea-b391809493d8.png"
+dest_files=[ "res://.import/3f7ad6ea-341d-4c3b-8cea-b391809493d8.png-e05b591d1d29b3225719323c569856ec.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

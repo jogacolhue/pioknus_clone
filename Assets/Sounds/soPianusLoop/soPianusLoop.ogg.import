@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/soPianusLoop.ogg-a2c6bd3bcc26e9979631351115564eb8.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sounds/soPianusLoop/soPianusLoop.ogg"
+dest_files=[ "res://.import/soPianusLoop.ogg-a2c6bd3bcc26e9979631351115564eb8.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

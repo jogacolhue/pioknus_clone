@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/dfc271be-e6b7-4a94-bf20-3d32d78b1d29.png-a2ca1117c58e7a3f8b295c8a0072dcde.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Sprites/sFontTimer/dfc271be-e6b7-4a94-bf20-3d32d78b1d29.png"
+dest_files=[ "res://.import/dfc271be-e6b7-4a94-bf20-3d32d78b1d29.png-a2ca1117c58e7a3f8b295c8a0072dcde.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

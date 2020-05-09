@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/9a627fb3-e810-4e9d-b38d-75bfd9118049.png-574779e6ba17aebe81b5a2e80c57b7ee.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Sprites/sSkillIconShadowPartner/layers/57c23469-dd68-4372-8163-bd0d77a52ed0/9a627fb3-e810-4e9d-b38d-75bfd9118049.png"
+dest_files=[ "res://.import/9a627fb3-e810-4e9d-b38d-75bfd9118049.png-574779e6ba17aebe81b5a2e80c57b7ee.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

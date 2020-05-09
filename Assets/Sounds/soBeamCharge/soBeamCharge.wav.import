@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/soBeamCharge.wav-df1d4e6848facc9e1f790917b8e88509.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/soBeamCharge/soBeamCharge.wav"
+dest_files=[ "res://.import/soBeamCharge.wav-df1d4e6848facc9e1f790917b8e88509.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

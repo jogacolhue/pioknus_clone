@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/9b53d9c8-f04a-4428-8d86-5d950df7848c.png-029deac0b6036f2115c3457e953008ff.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Sprites/sPlayerDragonCrusherHitbox/layers/64adc2ba-bcb5-42ae-a680-2635da4339f9/9b53d9c8-f04a-4428-8d86-5d950df7848c.png"
+dest_files=[ "res://.import/9b53d9c8-f04a-4428-8d86-5d950df7848c.png-029deac0b6036f2115c3457e953008ff.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
